@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Launch Project",
+            "type": "shell",
+            "command": "C://Users/tmela/OneDrive/Desktop/Godot_v4.3-stable_win64.exe",
+            "args": [
+                "--path",
+                "${workspaceFolder}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

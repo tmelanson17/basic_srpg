@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://b480y54hjpd4c"
+
+[deps]
+
+files=["res://Guy2/credits/credits.notes.translation", "res://Guy2/credits/credits.authors.translation", "res://Guy2/credits/credits.licenses.translation", "res://Guy2/credits/credits.urls.translation"]
+
+source_file="res://Guy2/credits/credits.csv"
+dest_files=["res://Guy2/credits/credits.notes.translation", "res://Guy2/credits/credits.authors.translation", "res://Guy2/credits/credits.licenses.translation", "res://Guy2/credits/credits.urls.translation"]
+
+[params]
+
+compress=true
+delimiter=0
