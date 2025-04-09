@@ -1,7 +1,7 @@
 [gd_scene load_steps=480 format=4 uid="uid://d34tyk2y2j17p"]
 
 [ext_resource type="Script" path="res://addons/LPCAnimatedSprite/LPCAnimatedSprite2D.gd" id="1_4jqtp"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="1_m5ooq"]
+[ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="1_m5ooq"]
 [ext_resource type="Script" path="res://addons/LPCAnimatedSprite/LPCAnimationData.gd" id="2_au7bu"]
 [ext_resource type="Texture2D" uid="uid://d3v320ypwembp" path="res://goblin_animations/standard/backslash.png" id="2_q1cr3"]
 [ext_resource type="Texture2D" uid="uid://dxq3yoplqgwyy" path="res://goblin_animations/standard/climb.png" id="3_hwte1"]

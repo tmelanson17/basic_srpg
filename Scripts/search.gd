@@ -1,4 +1,3 @@
-class_name Search
 extends Node
 
 # Directions for grid movement: up, down, left, right
@@ -12,9 +11,9 @@ var directions = [
 func get_direction(vect: Vector2) -> Vector2:
 	var angle = vect.angle()
 	print(abs(angle))
-	if abs(angle) < PI/4:
+	if abs(angle) < PI / 4:
 		return Vector2.RIGHT
-	elif abs(angle) > 3*PI/4:
+	elif abs(angle) > 3 * PI / 4:
 		return Vector2.LEFT
 	elif angle > 0:
 		return Vector2.DOWN
@@ -46,7 +45,7 @@ func bfs(start, target, grid):
 				came_from[neighbor] = current
 				queue.append(neighbor)
 	
-	return []  # Return an empty path if no path is found
+	return [] # Return an empty path if no path is found
 
 # Reconstruct the path from the 'came_from' dictionary
 func reconstruct_path(came_from, start, target):

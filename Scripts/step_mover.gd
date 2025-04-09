@@ -1,4 +1,5 @@
-class_name StepMover
+var Search = preload("res://Scripts/search.gd")
+var Grid = preload("res://Scripts/grid.gd")
 
 var speed = 100
 var MAX_X = 100
@@ -8,6 +9,7 @@ var target_position = Vector2.ZERO
 var current_position = Vector2.ZERO
 var path = {}
 var i = 0
+
 var search_algo = Search.new()
 var grid = Grid.new()
 
