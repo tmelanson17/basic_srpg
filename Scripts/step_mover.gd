@@ -31,7 +31,6 @@ func step_toward_target(position):
 	if not searching:
 		return position
 	var target_pos = grid.grid_to_real(path[i])
-	print("Current Target position: ", target_pos)
 	if position.is_equal_approx(target_pos):
 		i += 1
 	if i < path.size():

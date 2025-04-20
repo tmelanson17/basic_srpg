@@ -9,6 +9,7 @@ var tile_select_material: ShaderMaterial
 func _ready() -> void:
 	tile_layer = $TileMapLayer
 	tile_select_material = load("res://highlight_material.material")
+	SignalBus.connect("player_selection_state_changed", _on_player_selection_state_changed)
 
 func _unhandled_input(event):
 	if event is InputEventMouse:
@@ -29,3 +30,7 @@ func _process(_delta: float) -> void:
 		#tile_layer.set_cell(highlighted_tile) # Adjust the tile ID (0) as needed
 		#
 		#previous_highlighted_tile = highlighted_tile
+	
+func _on_player_selection_state_changed(state: int) -> void:
+	print("State changed to: ", state)
+	tile_select_material.set_shader_parameter("gameState", state)

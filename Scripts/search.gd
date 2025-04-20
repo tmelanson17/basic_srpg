@@ -10,7 +10,7 @@ var directions = [
 
 func get_direction(vect: Vector2) -> Vector2:
 	var angle = vect.angle()
-	print(abs(angle))
+	# print(abs(angle))
 	if abs(angle) < PI / 4:
 		return Vector2.RIGHT
 	elif abs(angle) > 3 * PI / 4:

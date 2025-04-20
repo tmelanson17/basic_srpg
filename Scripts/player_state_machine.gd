@@ -1,10 +1,10 @@
-class_name StateMachine
+class_name PlayerStateMachine
 
 enum State {
-	IDLE,
-	SELECTED,
-	MOVING,
-	ATTACK
+	IDLE = 0,
+	SELECTED = 1,
+	MOVING = 2,
+	ATTACK = 3,
 }
 
 # POD structure for state input
