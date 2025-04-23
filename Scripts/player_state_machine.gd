@@ -16,7 +16,7 @@ class StateInput:
 
 var current_state: State = State.IDLE
 
-func update(input: StateInput) -> void:
+func update(input: StateInput, cls: CharacterBody2D) -> void:
 	match current_state:
 		State.IDLE:
 			if input.is_selected:
@@ -34,3 +34,4 @@ func update(input: StateInput) -> void:
 		State.ATTACK:
 			if not input.is_attacking:
 				current_state = State.IDLE
+	cls.on_transition(current_state)

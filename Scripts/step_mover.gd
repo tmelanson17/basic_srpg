@@ -43,3 +43,10 @@ func step_toward_target(position):
 		
 func is_searching():
 	return searching
+
+func stop_search():
+	searching = false
+	i = 0
+	path = {}
+	current_position = Vector2.ZERO
+	target_position = Vector2.ZERO
