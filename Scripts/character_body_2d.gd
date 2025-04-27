@@ -37,6 +37,9 @@ func _unhandled_input(event):
 		state_machine.update(state_input, self)
 	elif event is InputEventMouseButton and event.pressed:
 		var mouse_pos = event.position.round()
+		print("Player Node name: ", get_name())
+		print("Mouse Clicked at ", mouse_pos)
+		print("Player position ", global_position)
 		if state_machine.current_state == PlayerStateMachine.State.MOVING:
 			state_input.is_moving = false
 			state_machine.update(state_input, self)
@@ -110,6 +113,7 @@ func on_transition_to_moving():
 	stepper.start_search(global_position, target_position)
 
 func on_transition(state):
+	print("ID: ", get_instance_id(), " State: ", state)
 	# Called when the state machine transitions to a new state
 	match state:
 		PlayerStateMachine.State.IDLE:
@@ -128,3 +132,5 @@ func _on_receive_selected_character_id(player_id):
 		state_input.is_moving = false
 		state_input.is_selected = false
 		state_machine.update(state_input, self)
+	elif player_id == KEY_NONE:
+		inactive = false
