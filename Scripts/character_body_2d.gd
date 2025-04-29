@@ -111,6 +111,7 @@ func on_transition_to_moving():
 	# Called when the state machine transitions to MOVING
 	print("Transitioning to MOVING state")
 	stepper.start_search(global_position, target_position)
+	SignalBus.emit_player_selection_state(state_machine.current_state)
 
 func on_transition(state):
 	print("ID: ", get_instance_id(), " State: ", state)
